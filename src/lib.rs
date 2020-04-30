@@ -66,51 +66,6 @@ pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a st
 mod tests {
     use super::*;
 
-    // #[test]
-    // fn config_new_error() {
-    //     let args = vec![String::from("path"), String::from("query")];
-    //
-    //     assert_eq!(Err("not enough arguments"), Config::new(&args));
-    // }
-    //
-    // #[test]
-    // fn config_new_ok_case_sensitive() {
-    //     let query = String::from("testQuery");
-    //     let filename = String::from("testFilename");
-    //     let case_sensitive = true;
-    //
-    //     let args = vec![String::from("path"), query.clone(), filename.clone()];
-    //
-    //     let expected_config = Config {
-    //         query,
-    //         filename,
-    //         case_sensitive,
-    //     };
-    //
-    //     env::remove_var("CASE_INSENSITIVE");
-    //
-    //     assert_eq!(Ok(expected_config), Config::new(&args));
-    // }
-    //
-    // #[test]
-    // fn config_new_ok_case_insensitive() {
-    //     let query = String::from("testQuery");
-    //     let filename = String::from("testFilename");
-    //     let case_sensitive = false;
-    //
-    //     let args = vec![String::from("path"), query.clone(), filename.clone()];
-    //
-    //     let expected_config = Config {
-    //         query,
-    //         filename,
-    //         case_sensitive,
-    //     };
-    //
-    //     env::set_var("CASE_INSENSITIVE", "true");
-    //
-    //     assert_eq!(Ok(expected_config), Config::new(&args));
-    // }
-
     #[test]
     fn case_sensitive_search() {
         let query = "duct";
