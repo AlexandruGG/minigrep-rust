@@ -36,6 +36,13 @@ impl Config {
     }
 }
 
+/// Runs the program using the config and search functions.
+///
+/// Performs the following operations:
+/// - reading from a given filename
+/// - searches for the given query with the appropriate search function
+/// - prints the results found
+/// - returns `Ok(())` if successful
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
 
