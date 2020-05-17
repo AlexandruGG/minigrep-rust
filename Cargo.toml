@@ -1,5 +1,5 @@
 [package]
-name = "minigrep"
+name = "minigrep_ag"
 description = "A light version of the popular command-line utility `grep`"
 license = "MIT"
 version = "0.1.0"
