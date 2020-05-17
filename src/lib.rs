@@ -1,3 +1,7 @@
+//! # Minigrep
+//!
+//! `minigrep` is a light version of the popular command-line utility `grep`
+
 use std::error::Error;
 use std::{env, fs};
 
@@ -48,6 +52,18 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/// Searches the `query` in the `contents` given - case sensitive.
+/// Returns a vector of string slices representing the lines where the query is found.
+///
+/// # Examples
+///
+/// ```
+/// let query = "the";
+/// let contents = "How public, like The Frog\nTo tell your name the livelong day";
+/// let result = vec!["To tell your name the livelong day"];
+///
+/// assert_eq!(result, minigrep::search(query, contents))
+/// ```
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
@@ -55,6 +71,18 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
         .collect()
 }
 
+/// Searches the `query` in the `contents` given - case insensitives.
+/// Returns a vector of string slices representing the lines where the query is found.
+///
+/// # Examples
+///
+/// ```
+/// let query = "the";
+/// let contents = "How public, like The Frog\nTo tell your name the livelong day";
+/// let result = vec!["How public, like The Frog", "To tell your name the livelong day"];
+///
+/// assert_eq!(result, minigrep::search_case_insensitive(query, contents))
+/// ```
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
