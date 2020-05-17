@@ -69,7 +69,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 /// let contents = "How public, like The Frog\nTo tell your name the livelong day";
 /// let result = vec!["To tell your name the livelong day"];
 ///
-/// assert_eq!(result, minigrep::search(query, contents))
+/// assert_eq!(result, minigrep_ag::search(query, contents))
 /// ```
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
@@ -88,7 +88,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 /// let contents = "How public, like The Frog\nTo tell your name the livelong day";
 /// let result = vec!["How public, like The Frog", "To tell your name the livelong day"];
 ///
-/// assert_eq!(result, minigrep::search_case_insensitive(query, contents))
+/// assert_eq!(result, minigrep_ag::search_case_insensitive(query, contents))
 /// ```
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
