@@ -1,7 +1,7 @@
 use std::error::Error;
 use std::{env, fs};
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug)]
 pub struct Config {
     pub query: String,
     pub filename: String,
