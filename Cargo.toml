@@ -2,7 +2,7 @@
 name = "minigrep_ag"
 description = "A light version of the popular command-line utility `grep`"
 license = "MIT"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["AlexandruGG <alex.gidei@goodlord.co>"]
 readme = "README.md"
 repository = "https://github.com/AlexandruGG/minigrep-rust"
